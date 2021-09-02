@@ -115,6 +115,8 @@ img {
     font-weight: 300;
     font-style: italic;
     color: #0eb1e3; 
+    justify-content: center;
+    align-items: center;
 }
 
 .project-top-section{
