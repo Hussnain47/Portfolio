@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+@media (max-width: 1200px) {
+    html{
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    html{
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 460px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFF;
+    background-color: gray;
+}
+
+h1,h2,h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 4.2rem;
+}
+h3{
+    font-size: 3rem;
+}
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00a2ff;
+    z-index: 10;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+}
+.nav-list{
+    display: flex;
+    margin-right: 2rem;
+}
+.nav-list a{
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+}
+.nav-list a:hover{
+    background: #303841;
+}
+
+@media (max-width: 460px) {
+    .nav{
+        justify-content: center;
+    }
+    .nav-list{
+        margin: auto;
+    }
+}
+
+.about-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+.about-section > p{
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #0eb1e3; 
+}
+
+.project-top-section{
+    text-align: center;
+    padding: 10rem 2rem;
+    background: #0066FF;
+}
+.project-section{
+    display: flex;
+    flex-direction: column;
+    background: #0066FF;
+}
+.projects-section-header {
+    max-width: fit-content;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid #FFF;
+  }
+
+.project-section a{
+    text-decoration: underline;
+}
+
+.project-section a:hover{
+    color: blue;
+}
+
+.spacer{
+    aspect-ratio: 1920/1080;
+    width: 100%;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.project-section-svg1{
+    background-image: url('./Project-section1.svg');
+}
+.project-section-svg2{
+    background-image: url('./Project-section2.svg');
+}
+
+.project-header{
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid #FFF;
+    max-width: fit-content;
+    padding-top: 3rem;
+}
+
+.project-split-1{
+    display: flex;
+    flex-direction: row;
+    justify-self: left;
+    padding: 1.5rem;
+    padding-top: 5rem;
+    width: 100%;
+}
+.project-split-text-1{
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    align-self: center;
+    position: relative;
+    padding-right: 20%;
+    bottom: 10rem;
+    width: 60%;
+}
+.project-split-header-1{
+    align-content: left;
+    width: fit-content;
+}
+.project-split-text-1 p{
+    
+    font-size: 2rem;
+}
+.project-split-img-1{
+    width: 45%;
+    justify-self: end;
+    align-self: center;
+
+}
+.project-img-1{
+    width: 100%;
+    max-height: 50vh;
+}
+.project-split-2{
+    display: flex;
+    flex-direction: row;
+    justify-self: left;
+    padding: 1.5rem;
+    padding-top: 5rem;
+    width: 100%;
+}
+.project-split-text-2{
+    display: flex;
+    flex-direction: column;
+    justify-self: right;
+    align-self: center;
+    position: relative;
+    padding-left: 20%;
+    bottom: 10rem;
+    width: 60%;
+}
+.project-split-header-2{
+    align-self: center;
+    justify-self: right;
+    width: fit-content;
+}
+
+.project-split-text-2 p{
+    justify-self: right;
+    font-size: 2rem;
+}
+
+.project-split-img-2{
+    width: 45%;
+    justify-self: left;
+    align-self: center;
+
+}
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+.appear-in{
+    opacity: 1;
+}
+
+.from-left{
+    transform: translateX(-20%);
+    opacity: 0;
+}
+
+.from-right{
+    transform: translateX(20%);
+    opacity: 0;
+}
+
+.from-left,
+.from-right{
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+}
+
+.from-left.appear-in,
+.from-right.appear-in{
+    transform: translateX(0);
+    opacity: 1;
+}

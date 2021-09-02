@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="Portfolio.css" />
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <nav id="navbar" class="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="#About">About Me</a>
+        </li>
+        <li>
+          <a href="#Projects">Projects</a>
+        </li>
+        <li>
+          <a href="#Contact">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="About" class="about-section fade-in">
+      <h1>Hi, I am Hussnain</h1>
+      <p>a Computer Engineering Student</p>
+    </section>
+
+    <section id="Projects" class="project-section">
+      <section id="Project-header" class="project-top-section">
+        <h1 class="projects-section-header fade-in">Projects I made</h1>
+      </section>
+      <section id="AlgoVisualize">
+        <h2 class="project-header fade-in">AlgoVisualize</h2>
+        <section
+          id="AlgoVisualize-part1"
+          class="spacer project-section-svg1 project-split-1"
+        >
+          <div id="header-1" class="project-split-text-1 slide-in from-left">
+            <h3 class="project-split-header-1">Overview:</h3>
+            <p>
+              Visualizing different Data Structures and applying algorithms on
+              them visually using <strong>Django Framework</strong> as Backend and using Vanilla
+              <strong>Javascript</strong> for the algorithms and a little bit Jquery for
+              animations.
+            </p>
+          </div>
+          <div id="image-1" class="project-split-img-1 slide-in from-right">
+            <img class="project-img-1" src="AlgoVisualize.jpg" />
+          </div>
+        </section>
+
+        <section
+          id="AlgoVisualize-part2"
+          class="spacer project-section-svg2 project-split-1"
+        >
+          <div class="project-split-img-2 slide-in from-left">
+            <img class="project-img-1" src="Sorting.gif" />
+          </div>
+          <div class="project-split-text-2 slide-in from-right">
+            <h3 class="project-split-header-1">Example(Sorting):</h3>
+            <p>
+              Firstly, there are four different sorting algorithms Bubble,Insertion,Merge and Quick 
+              Sort. Insertion Sort has 2 different versions. You just press start and it will sort for u. Here I am 
+              showing Merge Sort.
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="AlgoVisualize-part3"
+          class="spacer project-section-svg1 project-split-1"
+        >
+          <div id="header-1" class="project-split-text-1 slide-in from-left">
+            <h3 class="project-split-header-1">Example(Graph):</h3>
+            <p>
+              In Graphs, the user has to click on the screen to make new vertice and put the edge using the text boxes.
+              You have three different options for graphs BFS,DFS and Dijkstra. Here I am showing Dijkstra.
+              You can try this and more at <a href="https://algorithm-visualizer12.herokuapp.com/">here</a> .
+            </p>
+          </div>
+          <div id="image-1" class="project-split-img-1 slide-in from-right">
+            <img class="project-img-1" src="Graph.gif" />
+          </div>
+        </section>
+
+      </section>
+
+      <section id="ARS">
+        <h2 class="project-header fade-in">Airline Reservation System</h2>
+        <section
+          id="ARS-part1"
+          class="spacer project-section-svg1 project-split-1"
+        >
+          <div id="header-1" class="project-split-text-1 slide-in from-left">
+            <h3 class="project-split-header-1">Overview:</h3>
+            <p>
+              Developing a general Database System using <strong>MySQL</strong> for the Database and
+              <strong>Java</strong> for the functionality and <strong>JavaFX Framework</strong> for the
+              GUI. This Airline Reservation System lets user create account, make reservations, book tickets etc.
+              And it provides feature for admins like report of all the reservations made,keep track of different 
+              airplanes etc.
+            </p>
+          </div>
+          <div id="image-1" class="project-split-img-1 slide-in from-right">
+            <img class="project-img-1" src="ARSTable.JPG" />
+          </div>
+        </section>
+
+        <section
+          id="ARS-part2"
+          class="spacer project-section-svg2 project-split-1"
+        >
+          <div class="project-split-img-2 slide-in from-left">
+            <img class="project-img-1" src="ARSLogin.JPG" />
+          </div>
+          <div class="project-split-text-2 slide-in from-right">
+            <h3 class="project-split-header-1">Login Page:</h3>
+            <p>
+              A basic Login page to get access to the application.
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="ARS-part3"
+          class="spacer project-section-svg1 project-split-1"
+        >
+          <div id="header-1" class="project-split-text-1 slide-in from-left">
+            <h3 class="project-split-header-1">Report:</h3>
+            <p>
+              This reports the total number of reservation made and how many are vacant. And combined price of all the 
+              reservations.
+            </p>
+          </div>
+          <div id="image-1" class="project-split-img-1 slide-in from-right">
+            <img class="project-img-1" src="ARSReport.JPG" />
+          </div>
+        </section>
+
+      </section>
+    </section>
+  </body>
+  <script src="scrollingfadein.js"></script>
+</html>
