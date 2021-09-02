@@ -115,8 +115,12 @@ img {
     font-weight: 300;
     font-style: italic;
     color: #0eb1e3; 
-    justify-content: center;
-    align-items: center;
+    
+}
+@media (max-width: 460px) {
+    .about-section > p{
+        margin:auto;
+    }
 }
 
 .project-top-section{
@@ -129,6 +133,7 @@ img {
     flex-direction: column;
     background: #0066FF;
 }
+
 .projects-section-header {
     max-width: fit-content;
     margin: 0 auto 6rem auto;
@@ -169,9 +174,11 @@ img {
     display: flex;
     flex-direction: row;
     justify-self: left;
+    align-self: center;
     padding: 1.5rem;
     padding-top: 5rem;
     width: 100%;
+    height: 100%;
 }
 .project-split-text-1{
     display: flex;
@@ -180,7 +187,7 @@ img {
     align-self: center;
     position: relative;
     padding-right: 20%;
-    bottom: 10rem;
+    
     width: 60%;
 }
 .project-split-header-1{
@@ -191,6 +198,8 @@ img {
     
     font-size: 2rem;
 }
+
+
 .project-split-img-1{
     width: 45%;
     justify-self: end;
@@ -208,6 +217,7 @@ img {
     padding: 1.5rem;
     padding-top: 5rem;
     width: 100%;
+    height: 100%;
 }
 .project-split-text-2{
     display: flex;
@@ -216,7 +226,7 @@ img {
     align-self: center;
     position: relative;
     padding-left: 20%;
-    bottom: 10rem;
+
     width: 60%;
 }
 .project-split-header-2{
@@ -235,6 +245,16 @@ img {
     justify-self: left;
     align-self: center;
 
+}
+
+@media (max-width:460px) {
+    .project-split-header-1,.project-split-header-2{
+        
+        font-size: 1.75rem;
+    }
+    .project-split-text-1 p,.project-split-text-2 p{
+        font-size: 0.75rem;
+    }
 }
 
 .fade-in{
