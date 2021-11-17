@@ -23,13 +23,13 @@ html {
 
 @media (max-width: 768px) {
   html {
-    font-size: 58%;
+    font-size: 45%;
   }
 }
 
 @media (max-width: 460px) {
   html {
-    font-size: 55%;
+    font-size: 40%;
   }
 }
 
@@ -38,6 +38,22 @@ body {
   color: #fff;
   background-color: gray;
   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #00a2ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black;
 }
 
 h1,
