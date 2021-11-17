@@ -99,10 +99,11 @@ img {
 .nav-list a {
   display: block;
   font-size: 2.2rem;
-  padding: 2rem;
+  padding: 1.5rem;
+  transition: all 250ms ease-in-out;
 }
 .nav-list a:hover {
-  background: #303841;
+  background: #181719;
 }
 
 @media (max-width: 460px) {
@@ -271,25 +272,21 @@ img {
   opacity: 1;
 }
 
+.from-right {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: all 750ms ease-in-out;
+}
 .from-left {
-  transform: translateX(-20%);
   opacity: 0;
+  transform: translateX(-50%);
+  transition: all 750ms ease-in-out;
 }
+.appear-in {
+  transform: translateX(0) !important;
+  transform: translateY(0) !important;
 
-.from-right {
-  transform: translateX(20%);
-  opacity: 0;
-}
-
-.from-left,
-.from-right {
-  transition: opacity 250ms ease-in, transform 400ms ease-in;
-}
-
-.from-left.appear-in,
-.from-right.appear-in {
-  transform: translateX(0);
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .btn {
@@ -363,6 +360,7 @@ img {
   font-size: 2.4rem;
   text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
+  cursor: pointer;
 }
 
 .contact-details:hover {
