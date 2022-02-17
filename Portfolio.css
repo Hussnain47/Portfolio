@@ -97,37 +97,169 @@ img {
   width: 100%;
 }
 
-.nav {
+.Navbar {
   display: flex;
-  justify-content: flex-end;
+  width: 100vw;
+  justify-content: space-between; /* Putting each item spaced evenly */
+  align-items: center; /* Aligning to the center */
+  background-color: transparent;
+  color: white;
+  padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: #00a2ff;
   z-index: 10;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-}
-.nav-list {
-  display: flex;
-  margin-right: 2rem;
-}
-.nav-list a {
-  display: block;
-  font-size: 2.2rem;
-  padding: 1.5rem;
-  transition: all 250ms ease-in-out;
-}
-.nav-list a:hover {
-  background: #181719;
+  transition: all ease-in-out 500ms;
 }
 
-@media (max-width: 460px) {
-  .nav {
-    justify-content: center;
+.title {
+  margin: 0.5rem;
+  padding: 2vh 1vw;
+  text-align: center;
+}
+
+.title a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+  margin-left: 2rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.title:hover a {
+  color: #00a2ff;
+  cursor: pointer;
+}
+/* Nav Links Setting width using viewport-width for responsiveness */
+.Navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-right: 8rem;
+  align-items: center;
+  text-transform: uppercase;
+}
+/* Removing link style */
+.Navbar-links li {
+  list-style: none;
+  position: relative;
+}
+/* Removing underline and setting text color */
+.Navbar-links a {
+  text-decoration: none;
+  margin: 0 2rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+/* Hover effect */
+.Navbar-links a:hover {
+  color: #00a2ff;
+}
+/* Firstly setting the start point of animated underline */
+.Navbar-links .link::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  background-color: #00a2ff;
+
+  transition: all ease-in-out 250ms;
+  margin: 0 0 0 10%;
+}
+/* When hovered making it bigger  */
+.Navbar-links .link:hover::before {
+  width: 70%;
+}
+
+.scrolled-down {
+  /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
+  background-color: #3a3d4085;
+  padding-bottom: 0.25rem;
+  height: 8rem;
+}
+
+.hamburger {
+  display: none;
+}
+/* Making each lines of hamburger icon separeted by 5px margin */
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: white;
+  color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+/* For the cool cross animation */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 800px) {
+  /* Setting position to relative so it doesn't overlap with the content and making flex direction to column */
+  .Navbar {
+    z-index: 3;
+    flex-direction: column;
   }
-  .nav-list {
-    margin: auto;
+  .title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title a {
+    margin-left: auto;
+  }
+  /* Showing the hamburger icon */
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%); /*aligning it*/
+    z-index: 4;
+    transition: all 0.7s ease;
+  }
+  /* Navbar links won't show till we click hamburger icon */
+  .Navbar-links {
+    display: none;
+  }
+  /* Making the Navbar a column */
+  .Navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+    margin-right: 0;
+  }
+  /* Aligning links to center */
+  .Navbar-links li {
+    padding: 10px;
+    text-align: center;
+  }
+  .Navbar-links .link::before {
+    position: relative;
+    top: 18px;
+    left: -13px;
+  }
+  .Navbar-links .link:hover::before {
+    width: 90%;
+  }
+  /* Aligning login button */
+  .login-button {
+    margin: 0;
+  }
+  /* This will show the Nav bar items */
+  .Navbar-links.open {
+    display: flex;
   }
 }
 

@@ -16,19 +16,31 @@
   </head>
 
   <body>
-    <nav id="navbar" class="nav">
-      <ul class="nav-list">
-        <li>
-          <a href="#About">About Me</a>
-        </li>
-        <li>
-          <a href="#Projects">Projects</a>
-        </li>
-        <li>
-          <a href="#Contact">Contact Me</a>
-        </li>
-      </ul>
-    </nav>
+    <!-- Navigation bar -->
+
+    <header>
+      <nav id="Navbar" class="Navbar">
+        <div class="title">
+          <a href="#About">Hussnain</a>
+        </div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <div class="Navbar-links">
+          <ul>
+            <li>
+              <a class="link" href="#Projects">Projects</a>
+            </li>
+
+            <li>
+              <a class="link" href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <section id="About" class="about-section fade-in">
       <h1>Hi, I am Hussnain</h1>
@@ -39,7 +51,34 @@
       <section id="Project-header" class="project-top-section">
         <h1 class="projects-section-header fade-in">Projects I made</h1>
       </section>
-
+      <section id="neural_net">
+        <h2 class="project-header fade-in">Artificial Intelligense</h2>
+        <section
+          id="neural_net_1 "
+          class="spacer project-section-svg1 project-split-1"
+        >
+          <div id="header-1" class="project-split-text-1 slide-in from-left">
+            <h3 class="project-split-header-1">Music Genre Classifier:</h3>
+            <p>
+              The Purpose of this Project was to developing a machine learning
+              model that classifies music into genres automatically based on
+              various features, instead of manually entering the genre. Another
+              objective is to reach a good accuracy so that the model classifies
+              new music into its genre correctly. This model should be better
+              than at least a few preexisting models. Check it out here.
+              <a href="https://music-genre-classifier4.herokuapp.com/">here</a>
+              .
+            </p>
+          </div>
+          <div id="image-1" class="project-split-img-1 slide-in from-right">
+            <img
+              class="project-img-1"
+              alt="login-page"
+              src="./images/Music_Genre.png"
+            />
+          </div>
+        </section>
+      </section>
       <section id="static-website">
         <h2 class="project-header fade-in">Static Website</h2>
         <section

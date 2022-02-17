@@ -1,3 +1,15 @@
+$(window).scroll(function () {
+  if ($(window).scrollTop() <= 0) {
+    if ($("#Navbar").hasClass("scrolled-down")) {
+      $("#Navbar").removeClass("scrolled-down");
+    }
+  } else {
+    if (!$("#Navbar").hasClass("scrolled-down")) {
+      $("#Navbar").addClass("scrolled-down");
+    }
+  }
+});
+
 $(window).on("scroll", check_if_in_view);
 
 function check_if_in_view() {
